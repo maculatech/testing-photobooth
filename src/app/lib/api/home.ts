@@ -1,7 +1,7 @@
 import { HomePageData } from '@/app/types/home'
 
 // Configure your Payload CMS API URL
-const PAYLOAD_API_URL = process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000'
+const PAYLOAD_API_URL = process.env.NEXT_PUBLIC_SERVER_URL
 
 export class HomePageAPI {
   private static baseUrl = `${PAYLOAD_API_URL}/api/globals`

@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic'; // Add this line
+export const revalidate = 0; // Add this line
+
 import React from 'react'
 import Head from 'next/head'
 import { AboutAPI } from '@/app/lib/api/about'

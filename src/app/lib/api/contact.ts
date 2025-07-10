@@ -1,7 +1,7 @@
 // lib/api/contact.ts
 import { ContactPageData } from '@/app/types/contact';
 
-const API_BASE = process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000';
+const API_BASE = process.env.NEXT_PUBLIC_SERVER_URL;
 
 export const ContactAPI = {
   async getServerSideContactData(): Promise<ContactPageData | null> {

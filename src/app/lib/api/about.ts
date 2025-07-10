@@ -1,6 +1,6 @@
 import { AboutPage } from '@/app/types/about'
 
-const API_BASE = process.env.NEXT_PUBLIC_PAYLOAD_URL || 'http://localhost:3000'
+const API_BASE = process.env.NEXT_PUBLIC_SERVER_URL
 
 export const AboutAPI = {
   async getServerSideAboutData(): Promise<AboutPage | null> {

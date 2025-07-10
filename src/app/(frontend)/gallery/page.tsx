@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic'; // Add this line
+export const revalidate = 0; // Add this line
+
 import React from 'react'
 import { GalleryAPI } from '@/app/lib/api/gallery'
 import { GalleryData } from '@/app/types/gallery'

@@ -31,7 +31,7 @@ export default buildConfig({
   collections: [Users, Media],
   globals: [Header, Footer, HomePage, ServicesPage, AboutPage, GalleryPage, ContactPage, GetQuotePage],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || 'c86f5ffb890af0949f8c9a90',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },

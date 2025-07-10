@@ -1,6 +1,6 @@
 import { GetQuoteData } from '@/app/types/getQuote';
 
-const API_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000'}/api/globals/get-quote-page`;
+const API_URL = `${process.env.NEXT_PUBLIC_SERVER_URL}/api/globals/get-quote-page`;
 
 export const GetQuoteAPI = {
   async getServerSideQuoteData(): Promise<GetQuoteData | null> {
