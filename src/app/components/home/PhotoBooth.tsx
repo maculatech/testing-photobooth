@@ -16,12 +16,12 @@ export const PhotoBooth: React.FC<PhotoBoothProps> = ({ data }) => {
   return (
     <div className="mt-10 px-4 max-full">
       <div className="text-center mb-6">
-        <h3 className="font-semibold text-3xl md:text-[46px]">{data.heading}</h3>
+        <h3 className="font-semibold text-[#46423A] text-3xl md:text-[46px]">{data.heading}</h3>
         {data.subheading && (
-          <p className="text-base md:text-[20px] font-light">{data.subheading}</p>
+          <p className="text-base text-[#2E2E2E] md:text-[20px] font-light">{data.subheading}</p>
         )}
       </div>
-      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 mt-5 md:grid-cols-3">
         {data.booths.map((item, idx) => (
           <div className="relative h-[360px] md:h-[480px]" key={item.id || idx}>
             {item.image && (

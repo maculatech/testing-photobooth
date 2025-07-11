@@ -15,12 +15,12 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
   return (
     <div className="mt-16 px-4 w-full">
       <div className="text-center">
-        <h2 className="text-[24px] md:text-[40px] font-semibold">{data.heading}</h2>
-        {data.subheading && <p className="text-base md:text-[20px]">{data.subheading}</p>}
+        <h2 className="text-[24px] md:text-[40px] text-[#46423A] font-semibold">{data.heading}</h2>
+        {data.subheading && <p className="text-base text-[#2E2E2E] md:text-[20px]">{data.subheading}</p>}
       </div>
 
       {/* First 4 Images */}
-      <div className="grid mt-3 sm:mt-6 gap-2 sm:gap-4 grid-cols-2 sm:grid-cols-4">
+      <div className="grid mt-5 sm:mt-6 gap-2 sm:gap-4 grid-cols-2 sm:grid-cols-4">
         {data.galleryImages.slice(0, 4).map((item, idx) => (
           <div key={item.id || idx} className="relative h-[280px] md:h-[480px]">
             {item.image && (

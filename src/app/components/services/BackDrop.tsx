@@ -14,10 +14,10 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
   return (
     <div className="relative h-[606px] bg-[#FDF9FF] md:h-[1275px] w-full">
       <div className="max-w-[1130px] mt-10 mx-auto h-auto text-center py-4 px-2">
-        <h1 className="text-[24px] md:text-[46px] leading-tight font-semibold">
+        <h1 className="text-[24px] md:text-[46px] text-[#46423A] leading-tight font-semibold">
           {data.title}
         </h1>
-        <p className="text-[16px] md:leading-[26px] md:text-[20px] leading-[20px] mt-3 md:text-base">
+        <p className="text-[16px] md:leading-[26px] md:text-[20px] text-[#2E2E2E] leading-[20px] mt-3 md:text-base">
           {data.description}
         </p>
       </div>

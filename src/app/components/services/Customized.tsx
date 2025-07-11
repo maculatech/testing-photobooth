@@ -15,7 +15,7 @@ export const Customized: React.FC<CustomizedProps> = ({ data }) => {
   return (
     <div className='w-full md:content-center h-auto min-h-[797px] px-4 py-16'>
       <div className='text-center mb-10'>
-        <h1 className='text-[25px] md:text-[46px] leading-[30px] md:leading-[60px] font-semibold'>
+        <h1 className='text-[25px] text-[#46423A] md:text-[46px] leading-[30px] md:leading-[60px] font-semibold'>
           {data.title}
         </h1>
       </div>

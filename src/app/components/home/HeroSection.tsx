@@ -16,11 +16,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
     <div className="mt-[50px] flex flex-col px-4 justify-between pt-2 pb-2 md:h-[906px]">
       <div className="flex justify-center">
         <div className="w-full md:w-[642px] text-center">
-          <h1 className="font-sans font-semibold text-3xl md:text-[56px] leading-tight md:leading-[64px] capitalize">
+          <h1 className="font-sans text-[#222222] font-semibold text-3xl md:text-[56px] leading-tight md:leading-[64px] capitalize">
             {data.heading}
           </h1>
           {data.description && (
-            <p className="text-base md:text-[20px] mt-4 leading-6 font-normal">
+            <p className="text-base text-[#2E2E2E] md:text-[20px] mt-4 leading-6 font-normal">
               {data.description}
             </p>
           )}

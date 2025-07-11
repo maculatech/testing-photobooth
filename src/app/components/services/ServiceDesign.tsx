@@ -14,7 +14,7 @@ export const ServiceDesign: React.FC<ServiceDesignProps> = ({ data }) => {
     <div className='mt-[100px] flex flex-col md:justify-center p-[20px] items-center bg-[#FDF9FF] min-h-screen'>
       <div className='w-full mt-5'>
         <div className='max-w-[875px] text-center mx-auto'>
-          <h3 className='md:text-[46px] leading-[28px] text-[24px] font-bold md:leading-[52px]'>
+          <h3 className='md:text-[46px] leading-[28px] text-[#53585A] text-[24px] font-bold md:leading-[52px]'>
             {data.title}
           </h3>
         </div>

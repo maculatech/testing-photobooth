@@ -13,8 +13,8 @@ export const ClientLove: React.FC<ClientLoveProps> = ({ data }) => {
   }
 
   return (
-    <div className="w-full mt-5 px-4">
-      <h3 className="font-sans font-semibold text-[24px] md:text-[46px] leading-[60px] pt-3">
+    <div className="w-full mt-10 px-4">
+      <h3 className="font-sans font-semibold text-[24px] text-[#46423A] md:text-[46px] leading-[60px] pt-3">
         {data.heading}
       </h3>
       <div className="grid gap-5 mt-5 sm:grid-cols-2 md:grid-cols-4">
@@ -31,8 +31,8 @@ export const ClientLove: React.FC<ClientLoveProps> = ({ data }) => {
               </div>
             )}
             <div className="mt-3">
-              {item.title && <h3 className="text-[18px] font-bold">{item.title}</h3>}
-              {item.description && <p>{item.description}</p>}
+              {item.title && <h3 className="text-[18px] text-[#46423A] font-bold">{item.title}</h3>}
+              {item.description && <p className='text-[#2E2E2E] text-[16px]'>{item.description}</p>}
             </div>
           </div>
         ))}

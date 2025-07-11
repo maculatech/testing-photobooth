@@ -19,7 +19,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ imageList, title }) 
 
   return (
     <div className="text-center mt-16 px-4 w-full">
-      <h3 className="uppercase text-[20px] md:text-[46px] font-semibold">{title}</h3>
+      <h3 className="uppercase text-[20px] md:text-[46px] text-[#46423A] font-semibold">{title}</h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 md:gap-4 mt-6">
         {imageList.map((video, idx) => (
           <div key={video.id} className="relative h-[280px] md:h-[531px]">

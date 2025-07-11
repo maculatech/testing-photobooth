@@ -14,7 +14,7 @@ interface ReadyBookProps {
 export const ReadyToBook: React.FC<ReadyBookProps> = ({ data }) => {
   const pathname = usePathname()
 
-  const buttonWidth = pathname === '/services' || pathname === '/about' ? 'w-[330px]' : 'w-[217px]'
+  const buttonWidth = pathname === '/services' || pathname === '/about' ? 'w-[217px]' :  'w-[330px]'
 
   if (
     !data.heading ||
@@ -32,7 +32,7 @@ export const ReadyToBook: React.FC<ReadyBookProps> = ({ data }) => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Text Content */}
           <div className="text-white text-center md:text-center md:w-1/2 space-y-5">
-            <h2 className="text-[32px] md:text-[56px] leading-tight font-semibold">
+            <h2 className="text-[24px] md:text-[56px] leading-tight font-semibold">
               {data.heading}
             </h2>
             <p className="text-[18px] md:text-[20px] leading-[26px]">{data.description}</p>

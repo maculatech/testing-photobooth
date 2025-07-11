@@ -22,7 +22,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ data }) => {
 
   return (
     <div className="text-center mt-16 px-4 w-full">
-      <h3 className="uppercase text-[20px] md:text-[46px] font-semibold">
+      <h3 className="uppercase text-[#46423A] text-[20px] md:text-[46px] font-semibold">
         {data.heading}
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 md:gap-4 mt-6">

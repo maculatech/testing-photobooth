@@ -24,7 +24,7 @@ export const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           />
         </div>
 
-        <div className="order-1 md:order-2 bg-white border-2 p-[20px] md:p-[30px] md:absolute md:right-0 md:h-[627px] w-full md:w-[930px] shadow-lg">
+        <div className="order-1 md:order-2 bg-white p-[20px] md:p-[30px] md:absolute md:right-0 md:h-[627px] w-full md:w-[930px] shadow-lg">
           <h1 className="text-[24px] md:text-[40px] font-bold mb-4">{data.title}</h1>
           <div className="mb-4">
             <p className="text-[16px] md:text-[20px] leading-[20px] md:leading-[35px] font-normal text-[#454056]">

@@ -18,7 +18,7 @@ export const Works: React.FC<WorksProps> = ({ data }) => {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mt-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-17">
       <div className="order-2 md:order-1">
         <div className="h-[400px] md:h-[1019px] relative">
           {data.backgroundImage && (

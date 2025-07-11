@@ -14,7 +14,7 @@ export default function Header({ headerData }: { headerData: HeaderType }) {
 
   return (
     <div className={`w-full ${menuBtn ? 'h-[500px] bg-white shadow' : 'md:h-[127px]'} relative`}>
-      <div className="pt-[10px] shadow flex justify-between items-center px-4 md:px-10">
+      <div className="pt-[10px] shadow flex justify-between items-center px-4 ">
         {/* Logo Section */}
         <Link className="flex items-center select-none" href={'/'}>
           <div className="relative md:h-[101px] md:w-[101px] h-[56px] w-[56px]">

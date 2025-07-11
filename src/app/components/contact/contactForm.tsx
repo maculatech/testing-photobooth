@@ -66,7 +66,7 @@ export default function ContactForm() {
         <div className="h-[89px]">
           <label className="text-[16px] text-[#616161]">Full Name</label>
           <input
-            className="w-full mt-2 pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
+            className="w-full outline-none mt-2 pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
             type="text"
             placeholder="Enter Your Full Name"
             value={fullName}
@@ -79,7 +79,7 @@ export default function ContactForm() {
           <div className="md:w-1/2">
             <label className="text-[16px] text-[#616161]">Email</label>
             <input
-              className="w-full mt-2 pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
+              className="w-full outline-none mt-2 pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
               type="email"
               placeholder="Enter Your Email"
               value={email}
@@ -90,7 +90,7 @@ export default function ContactForm() {
           <div className="md:w-1/2">
             <label className="text-[16px] text-[#616161]">Phone</label>
             <input
-              className="w-full mt-2  pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
+              className="w-full outline-none mt-2  pl-[15px] h-[56px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
               type="text"
               placeholder="Enter Your Phone Number"
               value={phone}
@@ -102,7 +102,7 @@ export default function ContactForm() {
         <div className="h-[235px]">
           <label className="text-[16px] text-[#616161]">Message</label>
           <textarea
-            className="w-full mt-2 h-[202px] p-[15px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
+            className="w-full outline-none  mt-2 h-[202px] p-[15px] border border-[#BFBFBF] text-[#616161] rounded-[8px]"
             placeholder="Enter Your Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

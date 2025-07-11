@@ -20,9 +20,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
     <div className="bg-white flex flex-col shadow-lg rounded-2xl p-3 text-left min-h-[229px]">
       <div className="mb-4">
         {testimonial.name && (
-          <p className="text-[16px] font-semibold text-[#612042]">{testimonial.name}</p>
+          <p className="text-[16px] font-semibold text-[#454056]">{testimonial.name}</p>
         )}
-        {testimonial.role && <p className="text-sm text-gray-500">{testimonial.role}</p>}
+        {testimonial.role && <p className="text-sm text-[#612042 ]">{testimonial.role}</p>}
       </div>
       <div className="flex items-center gap-1 mb-4">
         {testimonial.rating !== undefined &&
@@ -41,7 +41,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
             )
           })()}
       </div>
-      {testimonial.text && <p className="text-gray-600">{testimonial.text}</p>}
+      {testimonial.text && <p className="text-[#646269]">{testimonial.text}</p>}
     </div>
   )
 }
@@ -80,13 +80,13 @@ export const Testimonial: React.FC<TestimonialProps> = ({ data }) => {
   }
 
   return (
-    <section className="w-full text-center h-[805px] content-center">
-      {data.subheading && <p className="text-gray-600 mb-3 max-w-xl mx-auto">{data.subheading}</p>}
+    <section className="w-full text-center h-[770px] content-center">
+      {data.subheading && <p className="text-[#612042] font-medium mb-3 max-w-xl mx-auto">{data.subheading}</p>}
       <div className="md:w-[714px] mx-auto">
-        <h2 className="text-[24px] md:text-[46px] font-bold text-[#612042] mb-2">{data.heading}</h2>
+        <h2 className="text-[24px] md:text-[46px] font-bold text-[#46423A] mb-2">{data.heading}</h2>
       </div>
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden mt-7">
         <div
           className="flex md:gap-4 h-[273px] transition-transform duration-500"
           style={{
