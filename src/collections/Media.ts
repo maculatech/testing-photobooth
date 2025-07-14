@@ -1,19 +1,19 @@
-// import type { CollectionConfig } from 'payload'
+import type { CollectionConfig } from 'payload'
 
-// export const Media: CollectionConfig = {
-//   slug: 'media',
-//   access: {
-//     read: () => true,
-//   },
-//   fields: [
-//     {
-//       name: 'alt',
-//       type: 'text',
-//       required: true,
-//     },
-//   ],
-//   upload: true,
-// }
+export const Media: CollectionConfig = {
+  slug: 'media',
+  access: {
+    read: () => true,
+  },
+  fields: [
+    {
+      name: 'alt',
+      type: 'text',
+      required: true,
+    },
+  ],
+  upload: true,
+}
 
 
 // import { CollectionConfig } from 'payload';
@@ -51,49 +51,49 @@
 //   ],
 // };
 
-import { CollectionConfig } from 'payload';
+// import { CollectionConfig } from 'payload';
 
-export const Media: CollectionConfig = {
-  slug: 'media',
-  access: {
-    read: () => true,
-    create: ({ req: { user } }) => !!user, // Only authenticated users can create
-    update: ({ req: { user } }) => !!user, // Only authenticated users can update
-    delete: ({ req: { user } }) => !!user, // Only authenticated users can delete
-  },
-  upload: {
-    // disableLocalStorage will be automatically set to true by the S3 storage adapter
-    mimeTypes: ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/svg+xml'],
-    adminThumbnail: 'thumbnail',
-    imageSizes: [
-      {
-        name: 'thumbnail',
-        width: 400,
-        height: 300,
-        position: 'centre',
-      },
-      {
-        name: 'card',
-        width: 768,
-        height: 1024,
-        position: 'centre',
-      },
-      {
-        name: 'tablet',
-        width: 1024,
-        height: undefined,
-        position: 'centre',
-      },
-    ],
-  },
-  fields: [
-    {
-      name: 'alt',
-      type: 'text',
-      required: true,
-    },
-  ],
-};
+// export const Media: CollectionConfig = {
+//   slug: 'media',
+//   access: {
+//     read: () => true,
+//     create: ({ req: { user } }) => !!user, // Only authenticated users can create
+//     update: ({ req: { user } }) => !!user, // Only authenticated users can update
+//     delete: ({ req: { user } }) => !!user, // Only authenticated users can delete
+//   },
+//   upload: {
+//     // disableLocalStorage will be automatically set to true by the S3 storage adapter
+//     mimeTypes: ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/svg+xml'],
+//     adminThumbnail: 'thumbnail',
+//     imageSizes: [
+//       {
+//         name: 'thumbnail',
+//         width: 400,
+//         height: 300,
+//         position: 'centre',
+//       },
+//       {
+//         name: 'card',
+//         width: 768,
+//         height: 1024,
+//         position: 'centre',
+//       },
+//       {
+//         name: 'tablet',
+//         width: 1024,
+//         height: undefined,
+//         position: 'centre',
+//       },
+//     ],
+//   },
+//   fields: [
+//     {
+//       name: 'alt',
+//       type: 'text',
+//       required: true,
+//     },
+//   ],
+// };
 
 
 // import { CollectionConfig } from 'payload';
