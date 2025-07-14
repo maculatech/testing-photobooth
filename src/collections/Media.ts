@@ -94,3 +94,48 @@ export const Media: CollectionConfig = {
     },
   ],
 };
+
+
+// import { CollectionConfig } from 'payload';
+
+// export const Media: CollectionConfig = {
+//   slug: 'media',
+//   access: {
+//     read: () => true,
+//     create: () => true, // Allow all authenticated users to create
+//     update: () => true, // Allow all authenticated users to update
+//     delete: () => true, // Allow all authenticated users to delete
+//   },
+//   upload: {
+//     mimeTypes: ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/svg+xml'],
+//     staticURL: '/media',
+//     adminThumbnail: 'thumbnail',
+//     imageSizes: [
+//       {
+//         name: 'thumbnail',
+//         width: 400,
+//         height: 300,
+//         position: 'centre',
+//       },
+//       {
+//         name: 'card',
+//         width: 768,
+//         height: 1024,
+//         position: 'centre',
+//       },
+//       {
+//         name: 'tablet',
+//         width: 1024,
+//         height: undefined,
+//         position: 'centre',
+//       },
+//     ],
+//   },
+//   fields: [
+//     {
+//       name: 'alt',
+//       type: 'text',
+//       required: true,
+//     },
+//   ],
+// };
