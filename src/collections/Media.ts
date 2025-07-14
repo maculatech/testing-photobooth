@@ -42,8 +42,8 @@ export const Media: CollectionConfig = {
       hooks: {
         afterRead: [({ data }) => {
           return process.env.NODE_ENV === 'development'
-            ? `${process.env.NEXT_PUBLIC_SERVER_URL}/media/${data.filename}`
-            : `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.S3_REGION}.amazonaws.com/media/${data.filename}`
+            ? `${process.env.NEXT_PUBLIC_SERVER_URL}/media/${data?.filename}`
+            : `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.S3_REGION}.amazonaws.com/media/${data?.filename}`
         }]
       }
     }
