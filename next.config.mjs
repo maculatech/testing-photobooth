@@ -22,12 +22,12 @@ import { withPayload } from '@payloadcms/next/withPayload'
 const nextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000',
-        pathname: '/api/media/file/**',
-      },
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      //   port: '3000',
+      //   pathname: '/api/media/file/**',
+      // },
       {
         protocol: 'https',
         hostname: `${process.env.S3_BUCKET_NAME}.s3.${process.env.S3_REGION}.amazonaws.com`,
