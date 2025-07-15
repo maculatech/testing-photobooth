@@ -30,12 +30,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: `${process.env.AWS_S3_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com`,
+        hostname: `${process.env.S3_BUCKET_NAME}.s3.${process.env.S3_REGION}.amazonaws.com`,
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: `${process.env.AWS_S3_BUCKET}.s3.amazonaws.com`,
+        hostname: `${process.env.S3_BUCKET_NAME}.s3.amazonaws.com`,
         pathname: '/**',
       },
     ],

@@ -1,7 +1,7 @@
 // components/service/HeroSection.tsx
 
 import React from 'react'
-import Image from "next/image"
+import Image from 'next/image'
 import { ServiceHeroSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
 

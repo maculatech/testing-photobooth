@@ -12,7 +12,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
     return null
   }
 
-  console.log(HomePageAPI.getImageUrl(data.heroImage), 'hii')
+  console.log(HomePageAPI.getImageUrl(data))
 
   return (
     <div className="mt-[50px] flex flex-col px-4 justify-between pt-2 pb-2 md:h-[906px]">
