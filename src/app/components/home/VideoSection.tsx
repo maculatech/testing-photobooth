@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import { IoPlayCircleOutline } from 'react-icons/io5';
 import { VideoSection as VideoSectionType } from '@/app/types/home';
 import { HomePageAPI } from '@/app/lib/api/home';
@@ -29,10 +28,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ data }) => {
         {data.videos.map((video, idx) => (
           <div key={video.id || idx} className="relative h-[280px] md:h-[531px]">
             {video.thumbnail && (
-              <Image
+              <img
                 src={HomePageAPI.getImageUrl(video.thumbnail)}
                 alt={video.thumbnail.alt || 'Video thumbnail'}
-                fill
                 className="object-cover rounded-[12px] md:rounded-[24px]"
               />
             )}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { ClientLoveSection as ClientLoveSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
 
@@ -22,10 +21,9 @@ export const ClientLove: React.FC<ClientLoveProps> = ({ data }) => {
           <div key={item.id || idx} className="flex flex-col">
             {item.image && (
               <div className="aspect-[4/5] w-full relative rounded-b-[24px] overflow-hidden">
-                <Image
+                <img
                   src={HomePageAPI.getImageUrl(item.image)}
                   alt={item.image.alt || 'Client feature'}
-                  fill
                   className="object-cover"
                 />
               </div>

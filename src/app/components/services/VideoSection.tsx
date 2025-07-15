@@ -3,7 +3,6 @@ import React from 'react'
 import { IoPlayCircleOutline } from "react-icons/io5"
 import { VideoItem } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
-import Image from 'next/image'
 
 interface VideoSectionProps {
   imageList: VideoItem[]
@@ -23,10 +22,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ imageList, title }) 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 md:gap-4 mt-6">
         {imageList.map((video, idx) => (
           <div key={video.id} className="relative h-[280px] md:h-[531px]">
-            <Image
+            <img
               src={ServicePageAPI.getImageUrl(video.thumbnail)}
               alt={video.title}
-              fill
               className="object-cover rounded-[12px] md:rounded-[24px]"
             />
             <div 

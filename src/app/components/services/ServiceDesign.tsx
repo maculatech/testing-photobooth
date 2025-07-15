@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { ServiceDesignSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
 
@@ -29,7 +28,7 @@ export const ServiceDesign: React.FC<ServiceDesignProps> = ({ data }) => {
               <div className={`h-[508px] max-w-[523px] ${
                 index % 2 === 1 ? 'order-1 md:order-2' : ''
               }`}>
-                <Image
+                <img
                   src={ServicePageAPI.getImageUrl(service.image)}
                   alt={service.title}
                   width={523}

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { HowItWorksSection as HowItWorksSectionType } from '@/app/types/home';
 import { HomePageAPI } from '@/app/lib/api/home';
 
@@ -22,10 +21,9 @@ export const Works: React.FC<WorksProps> = ({ data }) => {
       <div className="order-2 md:order-1">
         <div className="h-[400px] md:h-[1019px] relative">
           {data.backgroundImage && (
-            <Image
+            <img
               src={HomePageAPI.getImageUrl(data.backgroundImage)}
               alt={data.backgroundImage.alt || 'Team photo'}
-              fill
               className="object-cover"
             />
           )}

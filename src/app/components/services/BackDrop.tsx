@@ -1,7 +1,6 @@
 
 // components/service/BackDrop.tsx
 
-import Image from 'next/image'
 import React from 'react'
 import { BackdropSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
@@ -23,12 +22,10 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
       </div>
       
       <div className="w-full mt-5 h-[335px] md:h-[957px] relative">
-        <Image
+        <img
           src={ServicePageAPI.getImageUrl(data.backgroundImage)}
           alt="Backdrop background"
-          fill
           className="object-cover z-0"
-          priority
         />
       </div>
 
@@ -41,7 +38,7 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
                 key={img.id}
                 className={`w-[51px] h-[68px] md:w-[122px] md:h-[163px] rounded-sm overflow-hidden ${hideOnMobile}`}
               >
-                <Image
+                <img
                   src={ServicePageAPI.getImageUrl(img.image)}
                   alt={img.alt}
                   width={122}

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReadyToBookSection as ReadyToBookSectionType } from '@/app/types/home'
@@ -47,10 +46,9 @@ export const ReadyToBook: React.FC<ReadyBookProps> = ({ data }) => {
 
           {/* Image */}
           <div className="relative w-full max-w-[487px] h-[365px] md:h-[537px]">
-            <Image
+            <img
               src={HomePageAPI.getImageUrl(data.sectionImage)}
               alt={data.sectionImage.alt || 'Ready to book'}
-              fill
               className="object-cover rounded-[16px]"
             />
           </div>

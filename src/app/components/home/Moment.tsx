@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { MomentsSection as MomentsSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
 
@@ -24,10 +23,9 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
         {data.galleryImages.slice(0, 4).map((item, idx) => (
           <div key={item.id || idx} className="relative h-[280px] md:h-[480px]">
             {item.image && (
-              <Image
+              <img
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
-                fill
                 className="object-cover"
               />
             )}
@@ -39,10 +37,9 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
       <div className="mt-5">
         <div className="relative h-[280px] md:h-[677px]">
           {data.featuredImage && (
-            <Image
+            <img
               src={HomePageAPI.getImageUrl(data.featuredImage)}
               alt={data.featuredImage.alt || 'Featured moment'}
-              fill
               className="object-cover"
             />
           )}
@@ -54,10 +51,9 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
         {data.galleryImages.slice(4, 7).map((item, idx) => (
           <div key={item.id || idx} className="relative h-[280px] md:h-[480px]">
             {item.image && (
-              <Image
+              <img
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
-                fill
                 className="object-cover"
               />
             )}

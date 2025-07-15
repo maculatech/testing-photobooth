@@ -1,7 +1,6 @@
 // components/service/HeroSection.tsx
 
 import React from 'react'
-import Image from 'next/image'
 import { ServiceHeroSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
 
@@ -13,12 +12,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
   return (
     <div className="relative w-full">
       <div className="h-[400px] md:h-[500px] overflow-hidden">
-        <Image
+        <img
           src={ServicePageAPI.getImageUrl(data.heroImage)}
           alt="hero img"
-          fill
           className="object-cover z-0"
-          priority
         />
       </div>
 
