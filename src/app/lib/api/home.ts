@@ -67,15 +67,22 @@ export class HomePageAPI {
 
   /* Get image URL with proper handling for Payload media */
 
+  // static getImageUrl(media: any): string {
+  //   if (typeof media === 'string') {
+  //     return `${PAYLOAD_API_URL}${media}`
+  //   }
+
+  //   if (media && media.url) {
+  //     return media.url.startsWith('http') ? media.url : `${PAYLOAD_API_URL}${media.url}`
+  //   }
+
+  //   return '/placeholder-image.jpg'
+  // }
+
   static getImageUrl(media: any): string {
-    if (typeof media === 'string') {
-      return `${PAYLOAD_API_URL}${media}`
-    }
-
-    if (media && media.url) {
-      return media.url.startsWith('http') ? media.url : `${PAYLOAD_API_URL}${media.url}`
-    }
-
+    if (!media) return '/placeholder-image.jpg'
+    if (typeof media === 'string') return `${PAYLOAD_API_URL}${media}`
+    if (media.url) return media.url.startsWith('http') ? media.url : `${PAYLOAD_API_URL}${media.url}`
     return '/placeholder-image.jpg'
   }
 
