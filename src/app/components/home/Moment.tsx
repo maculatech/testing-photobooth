@@ -28,6 +28,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
               <ExternalImage
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
+                fill
                 className="object-cover"
               />
             )}
@@ -42,6 +43,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
             <ExternalImage
               src={HomePageAPI.getImageUrl(data.featuredImage)}
               alt={data.featuredImage.alt || 'Featured moment'}
+              fill
               className="object-cover"
             />
           )}
@@ -56,6 +58,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
               <ExternalImage
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
+                fill
                 className="object-cover"
               />
             )}

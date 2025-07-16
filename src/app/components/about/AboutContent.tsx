@@ -4,13 +4,11 @@ import React from 'react'
 import { AboutContent as AboutContentType } from '@/app/types/about'
 import { ExternalImage } from '../directImage/DirectImage'
 
-
 interface AboutContentProps {
   data: AboutContentType
 }
 
 export const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
-
   return (
     <div className="w-full px-4 mt-10 mb-10">
       <div className="relative grid md:grid-cols-2 justify-between items-center h-auto md:h-[856px] max-w-[1440px] mx-auto">
@@ -18,7 +16,9 @@ export const AboutContent: React.FC<AboutContentProps> = ({ data }) => {
           <ExternalImage
             src={data.image?.url || '/placeholder.jpg'}
             alt={data.image?.alt || 'About Image'}
-            className="w-full h-full object-cover rounded-md"
+            width={791}
+            height={856}
+            className="h-full! w-full! object-cover object-center rounded-md"
           />
         </div>
 

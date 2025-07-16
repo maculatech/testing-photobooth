@@ -31,6 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           <ExternalImage
             src={HomePageAPI.getImageUrl(data.heroImage)}
             alt={data.heroImage.alt || 'Hero banner'}
+            fill
             className="object-cover"
           />
         </div>

@@ -17,6 +17,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
           src={ServicePageAPI.getImageUrl(data.heroImage)}
           alt="hero img"
           className="object-cover z-0"
+          fill 
+          priority
         />
       </div>
 

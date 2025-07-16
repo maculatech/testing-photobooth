@@ -29,6 +29,7 @@ export const PhotoBooth: React.FC<PhotoBoothProps> = ({ data }) => {
               <ExternalImage
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.image.alt || item.title || 'Photo booth'}
+                fill
                 className="object-cover"
               />
             )}

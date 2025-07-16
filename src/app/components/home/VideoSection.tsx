@@ -33,6 +33,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ data }) => {
               <ExternalImage
                 src={HomePageAPI.getImageUrl(video.thumbnail)}
                 alt={video.thumbnail.alt || 'Video thumbnail'}
+                fill
                 className="object-cover rounded-[12px] md:rounded-[24px]"
               />
             )}

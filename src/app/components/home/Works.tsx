@@ -26,6 +26,7 @@ export const Works: React.FC<WorksProps> = ({ data }) => {
             <ExternalImage
               src={HomePageAPI.getImageUrl(data.backgroundImage)}
               alt={data.backgroundImage.alt || 'Team photo'}
+              fill
               className="object-cover"
             />
           )}

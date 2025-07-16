@@ -26,6 +26,7 @@ export const ClientLove: React.FC<ClientLoveProps> = ({ data }) => {
                 <ExternalImage
                   src={HomePageAPI.getImageUrl(item.image)}
                   alt={item.image.alt || 'Client feature'}
+                  fill
                   className="object-cover"
                 />
               </div>

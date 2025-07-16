@@ -1,4 +1,3 @@
-
 // components/service/BackDrop.tsx
 
 import React from 'react'
@@ -21,12 +20,14 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
           {data.description}
         </p>
       </div>
-      
+
       <div className="w-full mt-5 h-[335px] md:h-[957px] relative">
         <ExternalImage
           src={ServicePageAPI.getImageUrl(data.backgroundImage)}
           alt="Backdrop background"
           className="object-cover z-0"
+          fill
+          priority
         />
       </div>
 

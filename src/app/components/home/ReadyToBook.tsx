@@ -51,6 +51,7 @@ export const ReadyToBook: React.FC<ReadyBookProps> = ({ data }) => {
             <ExternalImage
               src={HomePageAPI.getImageUrl(data.sectionImage)}
               alt={data.sectionImage.alt || 'Ready to book'}
+              fill
               className="object-cover rounded-[16px]"
             />
           </div>

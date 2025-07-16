@@ -26,6 +26,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ imageList, title }) 
             <ExternalImage
               src={ServicePageAPI.getImageUrl(video.thumbnail)}
               alt={video.title}
+              fill
               className="object-cover rounded-[12px] md:rounded-[24px]"
             />
             <div 
