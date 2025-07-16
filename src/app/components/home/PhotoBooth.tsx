@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { PhotoBoothSection as PhotoBoothSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
+import Image from 'next/image'
 
 interface PhotoBoothProps {
   data: PhotoBoothSectionType
@@ -24,10 +25,11 @@ export const PhotoBooth: React.FC<PhotoBoothProps> = ({ data }) => {
         {data.booths.map((item, idx) => (
           <div className="relative h-[360px] md:h-[480px]" key={item.id || idx}>
             {item.image && (
-              <img
+              <Image
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.image.alt || item.title || 'Photo booth'}
                 className="object-cover"
+                fill
               />
             )}
             <div className="absolute bottom-0 w-full bg-black/30 px-2 py-3">

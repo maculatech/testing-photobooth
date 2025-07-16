@@ -80,8 +80,10 @@ export class HomePageAPI {
   // }
 
   static getImageUrl(media: any): string {
+    console.log(media)
     if (!media) return '/placeholder-image.jpg'
     if (typeof media === 'string') return `${PAYLOAD_API_URL}${media}`
+    console.log(media.url)
     if (media.url) return media.url.startsWith('http') ? media.url : `${PAYLOAD_API_URL}${media.url}`
     return '/placeholder-image.jpg'
   }
