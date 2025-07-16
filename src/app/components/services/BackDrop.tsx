@@ -4,6 +4,7 @@
 import React from 'react'
 import { BackdropSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
+import { ExternalImage } from '../directImage/DirectImage'
 
 interface BackDropProps {
   data: BackdropSection
@@ -22,7 +23,7 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
       </div>
       
       <div className="w-full mt-5 h-[335px] md:h-[957px] relative">
-        <img
+        <ExternalImage
           src={ServicePageAPI.getImageUrl(data.backgroundImage)}
           alt="Backdrop background"
           className="object-cover z-0"
@@ -38,7 +39,7 @@ export const BackDrop: React.FC<BackDropProps> = ({ data }) => {
                 key={img.id}
                 className={`w-[51px] h-[68px] md:w-[122px] md:h-[163px] rounded-sm overflow-hidden ${hideOnMobile}`}
               >
-                <img
+                <ExternalImage
                   src={ServicePageAPI.getImageUrl(img.image)}
                   alt={img.alt}
                   width={122}

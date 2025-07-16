@@ -3,6 +3,8 @@ import React from 'react';
 import { IoPlayCircleOutline } from 'react-icons/io5';
 import { VideoSection as VideoSectionType } from '@/app/types/home';
 import { HomePageAPI } from '@/app/lib/api/home';
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface VideoSectionProps {
   data: VideoSectionType;
@@ -28,7 +30,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ data }) => {
         {data.videos.map((video, idx) => (
           <div key={video.id || idx} className="relative h-[280px] md:h-[531px]">
             {video.thumbnail && (
-              <img
+              <ExternalImage
                 src={HomePageAPI.getImageUrl(video.thumbnail)}
                 alt={video.thumbnail.alt || 'Video thumbnail'}
                 className="object-cover rounded-[12px] md:rounded-[24px]"

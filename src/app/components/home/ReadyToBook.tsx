@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ReadyToBookSection as ReadyToBookSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface ReadyBookProps {
   data: ReadyToBookSectionType
@@ -46,7 +48,7 @@ export const ReadyToBook: React.FC<ReadyBookProps> = ({ data }) => {
 
           {/* Image */}
           <div className="relative w-full max-w-[487px] h-[365px] md:h-[537px]">
-            <img
+            <ExternalImage
               src={HomePageAPI.getImageUrl(data.sectionImage)}
               alt={data.sectionImage.alt || 'Ready to book'}
               className="object-cover rounded-[16px]"

@@ -1,6 +1,8 @@
 import React from 'react'
 import { MomentsSection as MomentsSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface MomentProps {
   data: MomentsSectionType
@@ -23,7 +25,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
         {data.galleryImages.slice(0, 4).map((item, idx) => (
           <div key={item.id || idx} className="relative h-[280px] md:h-[480px]">
             {item.image && (
-              <img
+              <ExternalImage
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
                 className="object-cover"
@@ -37,7 +39,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
       <div className="mt-5">
         <div className="relative h-[280px] md:h-[677px]">
           {data.featuredImage && (
-            <img
+            <ExternalImage
               src={HomePageAPI.getImageUrl(data.featuredImage)}
               alt={data.featuredImage.alt || 'Featured moment'}
               className="object-cover"
@@ -51,7 +53,7 @@ export const Moment: React.FC<MomentProps> = ({ data }) => {
         {data.galleryImages.slice(4, 7).map((item, idx) => (
           <div key={item.id || idx} className="relative h-[280px] md:h-[480px]">
             {item.image && (
-              <img
+              <ExternalImage
                 src={HomePageAPI.getImageUrl(item.image)}
                 alt={item.altText || item.image.alt || 'Gallery image'}
                 className="object-cover"

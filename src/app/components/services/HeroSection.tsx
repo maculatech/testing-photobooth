@@ -3,6 +3,7 @@
 import React from 'react'
 import { ServiceHeroSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
+import { ExternalImage } from '../directImage/DirectImage'
 
 interface HeroSectionProps {
   data: ServiceHeroSection
@@ -12,7 +13,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
   return (
     <div className="relative w-full">
       <div className="h-[400px] md:h-[500px] overflow-hidden">
-        <img
+        <ExternalImage
           src={ServicePageAPI.getImageUrl(data.heroImage)}
           alt="hero img"
           className="object-cover z-0"

@@ -1,6 +1,8 @@
 import React from 'react'
 import { ServiceDesignSection } from '@/app/types/services'
 import { ServicePageAPI } from '@/app/lib/api/services'
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface ServiceDesignProps {
   data: ServiceDesignSection
@@ -28,7 +30,7 @@ export const ServiceDesign: React.FC<ServiceDesignProps> = ({ data }) => {
               <div className={`h-[508px] max-w-[523px] ${
                 index % 2 === 1 ? 'order-1 md:order-2' : ''
               }`}>
-                <img
+                <ExternalImage
                   src={ServicePageAPI.getImageUrl(service.image)}
                   alt={service.title}
                   width={523}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { HowItWorksSection as HowItWorksSectionType } from '@/app/types/home';
 import { HomePageAPI } from '@/app/lib/api/home';
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface WorksProps {
   data: HowItWorksSectionType;
@@ -21,7 +23,7 @@ export const Works: React.FC<WorksProps> = ({ data }) => {
       <div className="order-2 md:order-1">
         <div className="h-[400px] md:h-[1019px] relative">
           {data.backgroundImage && (
-            <img
+            <ExternalImage
               src={HomePageAPI.getImageUrl(data.backgroundImage)}
               alt={data.backgroundImage.alt || 'Team photo'}
               className="object-cover"

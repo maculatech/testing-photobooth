@@ -54,6 +54,7 @@ import React, { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa6';
 import { FAQsSection as FAQsSectionType } from '@/app/types/home';
 
+
 interface FAQsProps {
   data: FAQsSectionType;
 }

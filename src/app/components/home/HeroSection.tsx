@@ -1,6 +1,7 @@
 import React from 'react'
 import { HeroSection as HeroSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
+import { ExternalImage } from '../directImage/DirectImage'
 
 interface HeroSectionProps {
   data: HeroSectionType
@@ -27,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ data }) => {
       </div>
       <div className="flex justify-center items-end mt-6 md:mt-0">
         <div className="w-full h-auto md:h-[636px] relative rounded-[24px] overflow-hidden">
-          <img
+          <ExternalImage
             src={HomePageAPI.getImageUrl(data.heroImage)}
             alt={data.heroImage.alt || 'Hero banner'}
             className="object-cover"

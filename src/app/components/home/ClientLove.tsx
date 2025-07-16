@@ -1,6 +1,8 @@
 import React from 'react'
 import { ClientLoveSection as ClientLoveSectionType } from '@/app/types/home'
 import { HomePageAPI } from '@/app/lib/api/home'
+import { ExternalImage } from '../directImage/DirectImage'
+
 
 interface ClientLoveProps {
   data: ClientLoveSectionType
@@ -21,7 +23,7 @@ export const ClientLove: React.FC<ClientLoveProps> = ({ data }) => {
           <div key={item.id || idx} className="flex flex-col">
             {item.image && (
               <div className="aspect-[4/5] w-full relative rounded-b-[24px] overflow-hidden">
-                <img
+                <ExternalImage
                   src={HomePageAPI.getImageUrl(item.image)}
                   alt={item.image.alt || 'Client feature'}
                   className="object-cover"
