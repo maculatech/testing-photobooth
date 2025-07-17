@@ -59,7 +59,7 @@ import { Media } from './collections/Media'
 import { Header } from './collections/Header'
 import { Footer } from './collections/Footer'
 import { HomePage } from './collections/HomePage'
-import { ServicesPage} from './collections/ServicesPage'
+import { ServicesPage } from './collections/ServicesPage'
 import { AboutPage } from './collections/AboutPage'
 import { GalleryPage } from './collections/Gallery'
 import { ContactPage } from './collections/ContactPage'
@@ -71,12 +71,39 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+    components: {
+      beforeDashboard: [
+        {
+          path: 'src/app/components/payload/LogoutButton.tsx',
+          exportName: 'default',
+        },
+      ],
+      graphics: {
+        Logo: {
+          path: 'src/app/components/customGraphics/Logo.tsx',
+          exportName: 'Logo',
+        },
+        Icon: {
+          path: 'src/app/components/customGraphics/Icon.tsx',
+          exportName: 'Icon',
+        },
+      },
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },
   },
   collections: [Users, Media],
-  globals: [Header, Footer, HomePage, ServicesPage, AboutPage, GalleryPage, ContactPage, GetQuotePage],
+  globals: [
+    Header,
+    Footer,
+    HomePage,
+    ServicesPage,
+    AboutPage,
+    GalleryPage,
+    ContactPage,
+    GetQuotePage,
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'c86f5ffb890af0949f8c9a90',
   typescript: {
